@@ -1,0 +1,31 @@
+nav{
+    background-color: white;
+}
+body{
+    background-color: #f9f9f9;
+}
+
+#video video{
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 2rem auto;
+    width: 660px;
+    height: 440px;
+    background-color: black;
+    
+}
+.lista{
+    margin: 2rem auto;
+    border-left: 1px solid rgb(221, 221, 221);
+}
+
+.lista li{
+    list-style-type: none; 
+}
+.miniatura a canvas{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+
