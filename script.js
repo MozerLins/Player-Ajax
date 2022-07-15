@@ -1,7 +1,6 @@
-
 var time = 4;// Time do Video Que Sera Criado o Canvas
 var thumbs = document.querySelectorAll('.miniatura a'); // Pega a Lista
-var links = ["videos/pato.mp4","videos/video1.mp4","videos/video2.mp4","videos/video3.mp4"];
+var links = ["videos/pato.mp4","videos/video1.mp4","videos/video2.mp4","videos/video3.mp4"];// Parametros Passados  Pelo PHP
 
 //Gerar thumb 
 links.forEach(function(links,index) {
@@ -26,31 +25,29 @@ links.forEach(function(links,index) {
         }, false);
 });
 
-
-
+// Função para carregar Video
 $(document).ready(function() {
     $('#lista li a').click(function(){
-        var id = $(this).attr('id');
-
-        if (id=="v1"){
-            $("#video").html('<video src="videos/pato.mp4" autoplay controls>');
-        }
-        if (id=="v2"){
-            $("#video").html('<video src="videos/video1.mp4" autoplay controls>');
-        }
-        if (id=="v3"){
-            $("#video").html('<video src="videos/video2.mp4" autoplay controls>');
-        }
-        if (id=="v4"){
-            $("#video").html('<video src="videos/video3.mp4" autoplay controls>');
-        }
+        var idpick = $(this).attr('id'); 
+         
+        var arraysid = $('#lista li a');
+        arraysid = Array.from(arraysid);
+    
+        arraysid.forEach(function (arraysid,index) {
+            if (idpick == arraysid.id){
+                $("#video").html('<video src='+links[index]+' autoplay controls>');
+            }
+        });    
     });
+});  
+
+$(document).ready(function() {
+    $(".form-control").keyup(function() {
+      var n = $(".form-control").val().toLowerCase(); //convert value to lowercase for case-insensitive comparison
+      $(".miniatura a").filter( function(index){
+         var $this = $(this);
+         var value = $this.attr( "title" ).toLowerCase(); //convert attribute value to lowercase
+        $this.parent().toggleClass( "hidden", !value.includes( n ));
+      })
+     });
 });
-
-
-//Jequery Para Trazer Videos Ao Frame
-
-/*var queryvideos = new Object();
-queryvideos.v1 = "videos/video1.mp4";
-queryvideos.v2 = "videos/video2.mp4";
-queryvideos.v3 = "videos/video3.mp4";*/

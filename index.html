@@ -13,38 +13,43 @@
     <link href="style.css" rel="stylesheet">
   </head>
    
-  <body>
+  <body >
+
+
     <div class="container-fluid">
       <nav class="navbar">
-          <a class="navbar-brand">CreateTube</a>
-          <form class="d-flex" role="search">
-            <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search">
-            <button class="btn btn-dark" type="submit">P</button>
-          </form>
-       </nav>
-    
+        <a class="navbar-brand ">Unitrac Player (Sinistros GrisWeb)</a>
+        <form class="d-flex" role="search">
+          <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search">
+          <button class="btn btn-white" type="submit"><img src="/images/lupa.png"></button>
+        </form>
+      </nav>
       <div class="row">
-        <div class="col-9">
+        <div class="col">
             <div id="video">
-              <video  src="videos/pato.mp4" autoplay controls>
+                <video src="videos/pato.mp4" autoplay controls>
             </div>
+            <div class="titulo">
+              Sinistro_2022_01_01_00_00_000
+            </div>
+         
         </div>
 
       <div class="col">
         <div class="lista">
-          <ul id='lista'>
-            <li class="miniatura"><a id="v1" href="#"></a></li>
-            <li class="miniatura"><a id="v2" href="#"></a></li>
-            <li class="miniatura"><a id="v3" href="#"></a></li>
-            <li class="miniatura"><a id="v4" href="#"></a></li>
+          <ul id='lista' class="miniatura ">
+            <li><a id="v1" title="video1" href="#"></a></li>
+            <li><a id="v2" title="v2idedso2" href="#"></a></li>
+            <li><a id="v3" title="video3" href="#"></a></li>
+            <li><a id="v4" title="video4" href="#"></a></li>
           </ul>
         </div>
       </div>
 
       </div>
+      
      </div>
-
-  
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/script.js">
